@@ -1,3 +1,5 @@
+import logging
+
 class Runner:
     def __init__(self, name, speed=5):
         if isinstance(name, str):
@@ -47,7 +49,11 @@ class Tournament:
 
         return finishers
 
-# first = Runner('Вося', 10)
+
+logging.basicConfig(level=logging.INFO, filemode='w', filename='runner_tests.log', encoding='utf-8',
+                        format='%(asctime)s | %(levelname)s | %(message)s')
+
+# first = Runner(1, 10)
 # second = Runner('Илья', 5)
 # # third = Runner('Арсен', 10)
 #
